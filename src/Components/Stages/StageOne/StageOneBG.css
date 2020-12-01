@@ -1,0 +1,119 @@
+.backCanvas {
+    height: 100vh;
+    width: 100vw;
+    background-color: #10162d;
+    color: #e14f52;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Background */
+
+.backy1 {
+    height: 54vh;
+    width: 20vw;
+    background-color: #EB715F;
+    position: fixed;
+    top: -4vh;
+    left: -4vw;
+    z-index: 101;
+    transform: matrix(2.800, 0.8, -2.8, 1, 0, 0);
+}
+
+.backy2 {
+    height: 54vh;
+    width: 20vw;
+    background-color: #85DA76;
+    position: fixed;
+    bottom: 44px;
+    right: -129px;
+    z-index: 102;
+    transform: matrix(1.886, 0.8, -3.8, 1.866, 0, 0);
+}
+
+.backy3 {
+    height: 54vh;
+    width: 40vw;
+    background-color: #F5B1CC;
+    position: fixed;
+    top: 20vh;
+    right: -90vh;
+    z-index: 101;
+    transform: matrix(2.886, 0.1, 2.8, 1.866, 0, 0);
+}
+
+.backy4 {
+    height: 54vh;
+    width: 20vw;
+    background-color: #DBAB71;
+    position: fixed;
+    bottom: -46vh;
+    left: -8vw;
+    z-index: 103;
+    transform: matrix(1, 2.8, -3.4, 1.2, 0, 0);
+}
+
+/* Animated */
+
+.backy6 {
+    height: 54vh;
+    width: 10vw;
+    background-color: #F5B1CC;
+    position: fixed;
+    bottom: -46vh;
+    left: -8vw;
+    z-index: 103;
+    transition: 4s;
+    transform: matrix(-2.8, 2.8, -3.4, 1.2, 0, 0);
+    opacity: 1;
+}
+
+.backy7 {
+    height: 14vh;
+    width: 10vw;
+    background-color: #DBAB71;
+    position: fixed;
+    top: -48vh;
+    right: -48vw;
+    z-index: 104;
+    transition: 4s;
+    transform: matrix(4.8, -6, -14, 6, 0, 0);
+    opacity: 0;
+}
+
+.backy8 {
+    height: 24vh;
+    width: 14vw;
+    background-color: #85DA76;
+    position: fixed;
+    top: -48vh;
+    left: 26vw;
+    z-index: 104;
+    transition: 4s;
+    transform: matrix(4, 1.8, 1.6, 4, 0, 0);
+    opacity: 1;
+}
+
+.backy9 {
+    height: 40vh;
+    width: 30vw;
+    background-color: #EB715F;
+    position: fixed;
+    bottom: -90vh;
+    right: -2vw;
+    z-index: 106;
+    transition: 4s;
+    transform: matrix(2, 2, 0, 3, 0, 0);
+    opacity: 0;
+}
+
+@media all and (max-width: 980px) {
+    .backCanvas {
+        height: 100.06vh;
+    }
+    .backy2 {
+        bottom: 10vh;
+        right: -10vw;
+    }
+}
