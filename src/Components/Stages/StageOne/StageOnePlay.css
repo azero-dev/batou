@@ -1,0 +1,58 @@
+.stplaybg {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+/*Button*/
+
+#stbtn {
+    opacity: 0;
+    height: 10vh;
+    width: 10vw;
+    align-self: center;
+    background-color: #e14f52;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    font-size: 4vh;
+    color: #10162d;
+    font-family: 'Monda', sans-serif;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#stbtn:hover {
+    background-color: #db4648;
+}
+
+/*Stage One Panel*/
+
+.stage-one_game {
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 6vw 8vw;
+    color: #e14f52;
+    font-family: 'Monda', sans-serif;
+    font-size: 1.2vw;
+}
+
+.stage-one_game h1 {
+    align-self: center;
+}
+
+.stage-one_game h1::selection {
+    color: #52e14f;
+}
+
+.stage-one_game p {
+    display: flex;
+    align-self: center;
+    color: white;
+}
+
+.stage-one_game p::selection {
+    color: #52e14f;
+}

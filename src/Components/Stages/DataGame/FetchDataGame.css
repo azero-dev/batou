@@ -1,0 +1,46 @@
+.form-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 6vh auto;
+}
+
+.input-general {
+    border: 0;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: #10162d;
+    font-family: 'Monda', sans-serif;
+    font-weight: bold;
+    margin: 0 1vw;
+    padding: 0 2vw;
+}
+
+.input-general::selection {
+    color: #e14f52;
+}
+
+.btn-general {
+    height: 6vh;
+    width: max-content;
+    align-self: center;
+    background-color: #e14f52;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    font-size: 4vh;
+    color: #10162d;
+    font-size: 1.2em;
+    font-family: 'Monda', sans-serif;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 0 1vw;
+    padding: 0 2vw;
+}
+
+.btn-general:hover {
+    background-color: #db4244;
+}

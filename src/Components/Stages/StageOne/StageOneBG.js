@@ -36,10 +36,10 @@ export const StageOneBG = (props) => {
 
     return (
         <div className="backCanvas">
-            <div className="backy1"></div>
-            <div className="backy2"></div>
-            <div className="backy3"></div>
-            <div className="backy4"></div>
+            <div id="backyOne" className="backy1"></div>
+            <div id="backyTwo" className="backy2"></div>
+            <div id="backyThree" className="backy3"></div>
+            <div id="backyFour" className="backy4"></div>
             {/* Animated */}
             <div id="backySix" className="backy6"></div>
             <div id="backySeven" className="backy7"></div>
