@@ -19,59 +19,17 @@ export const FetchDataGame = (props) => {
         }));
     }
 
-    const destroy = () => {
-        document.getElementById("destroy-button").style.display = "none";
-        document.getElementById("go-button").innerHTML = "NOW I'm happy... Let's go!";
-
-        document.getElementById("stageOneCanvas").style.backgroundColor = "black";
-        document.getElementById("backyOne").style.transition = "0.88s";
-        document.getElementById("backyTwo").style.transition = "0.80s";
-        document.getElementById("backyThree").style.transition = "0.6s";
-        document.getElementById("backyFour").style.transition = "2s";
-        document.getElementById("backySix").style.transition = "0.80s";
-        document.getElementById("backySeven").style.transition = "0.80s";
-        document.getElementById("backyEight").style.transition = "0.80s";
-        document.getElementById("backyNine").style.transition = "0.9s";
-
-        document.getElementById("backyOne").style.top = "280vh";
-        document.getElementById("backyTwo").style.right = "-280vh";
-        document.getElementById("backyThree").style.right = "-280vh";
-        document.getElementById("backyFour").style.bottom = "-280vh";
-        document.getElementById("backySix").style.top = "-280vh";
-        document.getElementById("backySeven").style.right = "-280vh";
-        document.getElementById("backyEight").style.left = "-280vh";
-        document.getElementById("backyNine").style.bottom = "-280vh";
-
-        setTimeout(() => {
-            document.getElementById("stageOneCanvas").style.transition = "0.08s";
-            document.getElementById("stageOneCanvas").style.left = "3vw";
-            setTimeout(() => {
-                document.getElementById("stageOneCanvas").style.left = "-3vw";
-                document.getElementById("stageOneCanvas").style.top = "0.2vw";
-                setTimeout(() => {
-                    document.getElementById("stageOneCanvas").style.left = "2vw";
-                    document.getElementById("stageOneCanvas").style.top = "-0.2vw";
-                    setTimeout(() => {
-                        document.getElementById("stageOneCanvas").style.left = "-2vw";
-                        document.getElementById("stageOneCanvas").style.top = "0.2vw";
-                        setTimeout(() => {
-                            document.getElementById("stageOneCanvas").style.left = "1vw";
-                            document.getElementById("stageOneCanvas").style.top = "-0.2vw";
-                            setTimeout(() => {
-                                document.getElementById("stageOneCanvas").style.left = "0";
-                                document.getElementById("stageOneCanvas").style.top = "0";
-                            }, 100);
-                        }, 90);
-                    }, 90);
-                }, 80);
-            }, 80);
-        }, 100);
-    }
-
     const nextGame = () => {
         setDatas(previousData => ({
             ...previousData,
-            stageOneCompSec: true
+            stage: 'StageTwo'
+        }));
+    }
+
+    const destroy = () => {
+        setDatas(previousData => ({
+            ...previousData,
+            DestroyStageOne: true,
         }));
     }
 
