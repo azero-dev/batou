@@ -58,6 +58,7 @@
     height: 54vh;
     bottom: 20vh;
     right: 10vw;
+    padding: 0 10px 0 0;
     background-image: url(../../../img/txt-win.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -67,7 +68,7 @@
     position: relative;
     left: 1vw;
     top: 6vh;
-    padding: 0 20px 0 0;
+    padding: 0 40px 0 0;
 }
 
 #panel-game_ST p:nth-child(2) {
@@ -89,8 +90,9 @@
 
 #start-menu p {
     position: relative;
-    bottom: 2.4vh;
+    top: 1.4vh;
     left: 5vw;
+    margin: 0;
     color: #fff;
     font-family: 'Padauk', sans-serif;
     font-size: 2.4em;
@@ -166,6 +168,21 @@
     user-select: none;
 }
 
+@media all and (min-width: 980px) and (max-width: 1400px) {
+    #start-menu p {
+        top: 1.2vh;
+        font-size: 2em;
+    }
+    #xp-bar_start p {
+        font-size: 0.9em;
+        top: -1.6vh;
+    }
+    #place-timer {
+        font-size: .8em;
+        padding: 10px 0 0;
+    }
+}
+
 @media all and (max-width: 980px) {
     #stage-two_background {
         height: 100.06vh;
@@ -175,14 +192,14 @@
         padding: 0 10px 0 0;
     }
     #start-menu p {
-        bottom: 2.2vh;
+        top: 2vh;
         font-size: 1em;
     }
     #xp-bar_start p {
         font-size: 0.9em;
     }
-    #xp-bar_date p {
+    #place-timer {
         font-size: .8em;
-        padding: 0.4vh 0 0;
+        padding: 2px 0 0;
     }
 }

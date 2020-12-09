@@ -1,3 +1,7 @@
+body {
+    background-color: #1d1d1d;
+}
+
 #linux-bg {
     background-image: url(../../../img/linux-bg.jpg);
     background-repeat: no-repeat;
@@ -56,15 +60,151 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.icons {
+    width: 2.2vw;
+    height: 2.2vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 1.2vw 0.85vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icons:hover {
+    filter: sepia(50%);
+    filter: invert(10%);
+}
+
+#lin-folder {
+    background-image: url(../../../img/linux-folder.png);
+}
+
+#lin-firefox {
+    background-image: url(../../../img/linux-firefox.png);
+}
+
+#lin-apps {
+    background-image: url(../../../img/linux-apps.png);
+    position: fixed;
+    bottom: 0;
+    cursor: default;
+    filter: sepia(0);
+    filter: invert(0);
+    width: 2vw;
+    height: 2vw;
+    margin: 1.2vw 0.95vw;
+}
+
 #lin-desktop {
     width: 96vw;
     height: 97vh;
 }
+
+#lin-bar_settings-menu {
+    display: none;
+    position: fixed;
+    width: 16vw;
+    height: 44vh;
+    top: 3vh;
+    right: 0.2vw;
+    background-image: url(../../../img/linux-settings-menu.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 300;
+}
+
+#lin-panel_terminal {
+    opacity: 0;
+    position: fixed;
+    width: 34vw;
+    height: 54vh;
+    top: 10vh;
+    left: 10vw;
+    border-radius: 6px 6px 0 0;
+    transition: opacity 1s;
+}
+
+#lin-panel_terminal:hover {
+    opacity: 0;
+}
+
+#terminal-head {
+    height: 5.6%;
+    width: 34vw;
+    background-image: url(../../../img/linux-terminal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#terminal-close {
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+}
+
+#terminal-body {
+    background-color: #300a24;
+    width: 33.984vw;
+    height: 94.4%;
+}
+
+#terminal-body p {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #4e9906;
+}
+
+#lin-panel_manager {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    height: 58vh;
+    top: 28vh;
+    left: 14vw;
+    background-color: black;
+}
+
+#lin-panel_firefox {
+    display: none;
+    position: fixed;
+    width: 70vw;
+    height: 84vh;
+    top: 10vh;
+    right: 10vw;
+    background-color: blanchedalmond;
+}
+
+@media all and (min-width: 980px) and (max-width: 1400px) {}
 
 @media all and (max-width: 980px) {
     #linux-bg {
         height: 100.06vh;
         background-attachment: local;
     }
-
+    #lin-bar {
+        height: 5vh;
+    }
+    #lin-bar_activity {
+        font-size: 0.6em;
+        margin: 2px 0 0;
+    }
+    #lin-bar_time {
+        font-size: 0.6em;
+        margin: 2px 0 0;
+    }
+    #lin-bar_settings {
+        width: 58px;
+        height: 5vh;
+    }
+    #lin-sidebar {
+        height: 95vh;
+    }
+    #lin-desktop {
+        height: 95vh;
+    }
 }
