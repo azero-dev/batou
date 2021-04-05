@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import './StageThree.css';
 import { DataContext } from '../DataGame/DataContext';
+import { Firefox } from '../Firefox/Firefox';
 
 export const StageThree = props => {
     const [datas, setDatas] = useContext(DataContext);
@@ -79,7 +80,12 @@ export const StageThree = props => {
                         </div>
                     </div>
                     <div id="lin-panel_manager"></div>
-                    <div id="lin-panel_firefox"></div>
+                    <div id="lin-panel_firefox">
+                        <div className="firefox-head"></div>
+                        <div className="firefox-body">
+                            <Firefox />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

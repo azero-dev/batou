@@ -176,7 +176,21 @@ body {
     height: 84vh;
     top: 10vh;
     right: 10vw;
-    background-color: blanchedalmond;
+    border-radius: 10px 10px 0 0;
+}
+
+.firefox-head {
+    background-image: url(../../../img/firefox-window.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 14vh;
+}
+
+.firefox-body {
+    width: 70vw;
+    height: 70vh;
+    background-color: #fff8ec;
 }
 
 @media all and (min-width: 980px) and (max-width: 1400px) {}
