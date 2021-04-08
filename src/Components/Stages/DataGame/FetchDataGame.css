@@ -17,6 +17,7 @@
     font-weight: bold;
     margin: 0 1vw;
     padding: 0 2vw;
+    outline: none;
 }
 
 .input-general::selection {

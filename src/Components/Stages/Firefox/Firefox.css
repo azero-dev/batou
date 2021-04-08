@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    overflow: scroll;
 }
 
 .ff-bg img {
@@ -14,17 +15,77 @@
     margin: 0 0 4vh;
 }
 
+.ff-bg input {
+    border: 0;
+    border-radius: 20px;
+    border-bottom: 2px solid #de5833;
+    font-size: 1.2em;
+    color: #de5833;
+    font-family: 'Monda', sans-serif;
+    font-weight: bold;
+    margin: 0 1vw;
+    padding: 1vh 2vw;
+    outline: none;
+    background-color: #fff;
+}
+
 .ff-bg button {
     background-color: #de5833;
     border: none;
     border-radius: 10px;
     padding: 10px 22px;
-    font-size: 2em;
+    font-size: 1.4em;
     color: #fff;
     cursor: pointer;
     transition: background-color .2s;
 }
 
+.input-food {
+    border: 0 !important;
+    background-color: #de5833 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
 .ff-bg button:hover {
     background-color: #d44a24;
+}
+
+.search-area {
+    width: 100%;
+}
+
+.search-area_items {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.food-items {
+    width: 40%;
+    text-align: center;
+    margin: 2% 5%;
+    background-color: #fffff9;
+    padding: 4% 0;
+    cursor: pointer;
+}
+
+.food-items p::selection, .food-items h1::selection {
+    color: #d44a24;
+}
+
+.food-items:nth-child(odd) {
+    border-radius: 4vw 4vw 0;
+}
+
+.food-items:nth-child(even) {
+    border-radius: 4vw 4vw 4vw 0;
+}
+
+.food-items h1 {
+    font-size: 1.4em;
+}
+
+.food-items img {
+    border-radius: 18% 18% 0;
+    user-select: none;
 }

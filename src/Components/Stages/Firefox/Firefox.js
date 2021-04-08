@@ -21,12 +21,12 @@ export const Firefox = props => {
     const getFood = e => {
         e.preventDefault()
         setSurf('three');
-        const apiId = 'xxxx';
-        const apiKey = 'xxxx';
+        const apiId = 'XXXX';
+        const apiKey = 'XXXX';
 
         axios.get(`https://api.edamam.com/search?q=${foodSe}&app_id=${apiId}&app_key=${apiKey}&from=0&to=4`)
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setFetchedFood(res.data);
             })
             .catch(err => {
@@ -47,24 +47,26 @@ export const Firefox = props => {
                 <div className="ff-bg">
                     <img src={duckLogo} alt="DuckDuckGo" />
                     <form onSubmit={getFood}>
-                        <label>
-                            <textarea value={foodSe} onChange={handleFoodChange} />
-                        </label>
-                        <input type="submit" value="Go for it!" />
+                        <input value={foodSe} onChange={handleFoodChange} />
+                        <input className="input-food" type="submit" value="Go for it!" />
                     </form>
                 </div>
             ) : null}
             {surf === 'three' ? (
-                <div className="ff-bg">
-                    <img src={duckLogo} alt="DuckDuckGo" />
-                    <div>{fetchedFood !== '' ? <div>
+                <div className="search-area">{fetchedFood !== '' ?
+                    <div className="search-area_items">
                         {fetchedFood.hits.map(elem => {
-                            return (<div className="firefox_food-search">
+                            return (<div className="food-items">
                                 <img src={elem.recipe.image} alt={elem.recipe.label} width="200px" />
                                 <h1>{elem.recipe.label}</h1>
-                            </div>)
+                                <p>Ingredients:</p>
+                                {elem.recipe.ingredientLines.map(ing => {
+                                    return <p>{ing}</p>
+                                })}
+                            </div>
+                            )
                         })}
-                    </div> : null}</div>
+                    </div> : null}
                 </div>
             ) : null}
         </>
