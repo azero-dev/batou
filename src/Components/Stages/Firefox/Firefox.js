@@ -23,8 +23,8 @@ export const Firefox = props => {
     const getFood = e => {
         e.preventDefault()
         setSurf('three');
-        const apiId = '016054b1';
-        const apiKey = 'fc6eef943588d3528eddc9397868acb5';
+        const apiId = 'XXXX';
+        const apiKey = 'XXXX';
 
         axios.get(`https://api.edamam.com/search?q=${foodSe}&app_id=${apiId}&app_key=${apiKey}&from=0&to=4`)
             .then(res => {
