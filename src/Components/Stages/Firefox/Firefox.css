@@ -61,11 +61,11 @@
 }
 
 .food-items {
-    width: 40%;
+    width: 36%;
     text-align: center;
     margin: 2% 5%;
     background-color: #fffff9;
-    padding: 4% 0;
+    padding: 4% 2%;
     cursor: pointer;
 }
 

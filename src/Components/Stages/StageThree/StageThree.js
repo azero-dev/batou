@@ -1,11 +1,19 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState, useCallback } from 'react';
 import './StageThree.css';
 import { DataContext } from '../DataGame/DataContext';
 import { Firefox } from '../Firefox/Firefox';
 
 export const StageThree = props => {
     const [datas, setDatas] = useContext(DataContext);
-    const name = datas.name;
+    const [backNum, setBackNum] = useState(4);
+
+    const decreasNum = useCallback(() => setBackNum(backNum - 1), [backNum]);
+    const nextSt = () => {
+        setDatas(previousData => ({
+            ...previousData,
+            stage: 'StageFour'
+        }));
+    }
 
     const closeTerminal = () => {
         document.getElementById('lin-panel_terminal').style.display = "none";
@@ -44,6 +52,20 @@ export const StageThree = props => {
             window.removeEventListener('load', openTerminal());
         }
     }, [])
+
+    useEffect(() => {
+        let setBackNum = setInterval(() => {
+            if (datas.enterFour === true && backNum > 0) {
+                decreasNum();
+            } else if (backNum === 0) {
+                nextSt();
+            }
+        }, 1400);
+
+        return () => {
+            clearInterval(setBackNum);
+        }
+    }, [backNum, datas.enterFour, decreasNum])
 
     const releaseSettingsMenu = () => {
         let isMenuUp = window.getComputedStyle(document.getElementById("lin-bar_settings-menu")).getPropertyValue('display');
@@ -87,6 +109,9 @@ export const StageThree = props => {
                         </div>
                     </div>
                 </div>
+                {datas.enterFour === false ? null : (
+                    <p className="backNumber">{backNum}</p>
+                )}
             </div>
         </div>
     )

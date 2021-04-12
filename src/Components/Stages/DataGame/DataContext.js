@@ -7,8 +7,9 @@ export const DataProvider = props => {
         {
             name: '',
             stageOneComp: false,
-            stage: 'StageOne',
+            stage: 'StageThree',
             DestroyStageOne: false,
+            enterFour: false,
         },
     );
 

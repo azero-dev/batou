@@ -194,6 +194,16 @@ body {
     overflow: auto;
 }
 
+.backNumber {
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+    margin: 0;
+    font-size: 8em;
+    font-weight: bold;
+    color: #f08080;
+}
+
 @media all and (min-width: 980px) and (max-width: 1400px) {}
 
 @media all and (max-width: 980px) {
